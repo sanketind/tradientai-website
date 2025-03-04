@@ -18,13 +18,20 @@ export default function ContactForm() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'success' | 'error' | null>(null);
+  const [errorMessage, setErrorMessage] = useState<string>('');
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus(null);
+    setErrorMessage('');
 
     try {
+      // Check if Supabase is properly configured
+      if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY) {
+        throw new Error('Contact form is temporarily unavailable. Please try again later.');
+      }
+
       const { error } = await supabase
         .from('waitlist')
         .insert([
@@ -36,13 +43,19 @@ export default function ContactForm() {
           }
         ]);
 
-      if (error) throw error;
+      if (error) {
+        if (error.code === '23505') { // Unique violation error code
+          throw new Error('This email is already registered.');
+        }
+        throw error;
+      }
 
       setSubmitStatus('success');
       setFormData({ name: '', workEmail: '', firmName: '' });
-    } catch (error) {
+    } catch (error: any) {
       console.error('Error submitting form:', error);
       setSubmitStatus('error');
+      setErrorMessage(error.message || 'Something went wrong. Please try again later.');
     } finally {
       setIsSubmitting(false);
     }
@@ -106,7 +119,7 @@ export default function ContactForm() {
           )}
           {submitStatus === 'error' && (
             <div className="text-red-600 text-center py-2">
-              Something went wrong. Please try again later.
+              {errorMessage}
             </div>
           )}
           <motion.button
