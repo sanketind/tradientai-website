@@ -3,9 +3,15 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ['skouvqrkcwlmvegymyoy.supabase.co'],
     unoptimized: true,
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**',
+      },
+    ],
   },
+  output: 'standalone',
 }
 
 module.exports = nextConfig 
