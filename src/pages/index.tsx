@@ -1,9 +1,22 @@
 import React from 'react';
 import type { NextPage } from 'next';
-import Hero from '../components/Hero';
-import Features from '../components/Features';
-import ContactForm from '../components/ContactForm';
-import Footer from '../components/Footer';
+import dynamic from 'next/dynamic';
+
+const Hero = dynamic(() => import('../components/Hero'), {
+  ssr: true,
+});
+
+const Features = dynamic(() => import('../components/Features'), {
+  ssr: true,
+});
+
+const ContactForm = dynamic(() => import('../components/ContactForm'), {
+  ssr: true,
+});
+
+const Footer = dynamic(() => import('../components/Footer'), {
+  ssr: true,
+});
 
 const Home: NextPage = () => {
   return (
