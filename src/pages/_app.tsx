@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import '../styles/globals.css'; // Adjust the path as necessary
+import '../styles/globals.css';
 import { AppProps } from 'next/app';
 import { useRouter } from 'next/router';
 import posthog from 'posthog-js';
