@@ -6,32 +6,32 @@ const Features = () => {
     {
       title: "24/7 Call Answering",
       description: "Answer every customer call instantly with an AI agent available 24/7—handling inquiries about pricing, availability, or shipping anytime, anywhere.",
-      image: "/images/247 Call Answering.jpg"
+      image: "/images/features/247-call-answering.png"
     },
     {
       title: "Multi-Lingual Communication",
       description: "Break language barriers with support for 15+ languages, letting you serve clients across borders with clear, fluent communication.",
-      image: "/images/Multi-Lingual Communication.jpg"
+      image: "/images/features/multi-lingual.png"
     },
     {
       title: "Auto Schedule & Follow-Ups",
       description: "Automate appointment booking, rescheduling, reminders, and follow-up emails or SMS—syncing with your calendar to secure meetings and ensure no more missed opportunities.",
-      image: "/images/Auto Schedule & Follow-Ups.jpg"
+      image: "/images/features/auto-schedule.png"
     },
     {
       title: "Actionable Call Insights",
       description: "Gain deep insights with call recordings, sentiment analysis, and concise summaries—helping you understand customer needs and prioritize follow-ups.",
-      image: "/images/Actionable Call Insights.jpg"
+      image: "/images/features/call-insights.png"
     },
     {
       title: "Personalized AI Agent",
       description: "Customize your AI agent's voice, tone, and responses to match your brand—ensuring every interaction feels professional and on-point.",
-      image: "/images/Personalized AI Agent.jpg"
+      image: "/images/features/ai-agent.png"
     },
     {
       title: "Customizable Knowledge Base",
       description: "Upload your product catalogs, SOPs, or website URLs to create a tailored knowledge base—ensuring the AI always gives accurate, business-specific answers.",
-      image: "/images/Customizable Knowledge Base.jpg"
+      image: "/images/features/knowledge-base.png"
     },
   ];
 

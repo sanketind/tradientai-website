@@ -2,6 +2,10 @@ import React from 'react';
 import type { NextPage } from 'next';
 import dynamic from 'next/dynamic';
 
+const Navbar = dynamic(() => import('../components/Navbar'), {
+  ssr: true,
+});
+
 const Hero = dynamic(() => import('../components/Hero'), {
   ssr: true,
 });
@@ -21,6 +25,7 @@ const Footer = dynamic(() => import('../components/Footer'), {
 const Home: NextPage = () => {
   return (
     <main className="min-h-screen">
+      <Navbar />
       <Hero />
       <Features />
       <ContactForm />
