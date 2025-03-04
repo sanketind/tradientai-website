@@ -1,9 +1,9 @@
 import React from 'react';
 import Head from 'next/head';
 import '../styles/globals.css'; // Adjust the path as necessary
-import type { AppProps } from 'next/app';
+import { AppProps } from 'next/app';
 
-function MyApp({ Component, pageProps }: AppProps) {
+const MyApp = ({ Component, pageProps }: AppProps) => {
     return (
         <>
             <Head>
@@ -14,6 +14,6 @@ function MyApp({ Component, pageProps }: AppProps) {
             <Component {...pageProps} />
         </>
     );
-}
+};
 
 export default MyApp; 
