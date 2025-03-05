@@ -22,6 +22,10 @@ const Footer = dynamic(() => import('../components/Footer'), {
   ssr: true,
 });
 
+const WhatsAppButton = dynamic(() => import('../components/WhatsAppButton'), {
+  ssr: true,
+});
+
 const Home: NextPage = () => {
   return (
     <main className="min-h-screen">
@@ -30,6 +34,7 @@ const Home: NextPage = () => {
       <Features />
       <ContactForm />
       <Footer />
+      <WhatsAppButton />
     </main>
   );
 };
