@@ -61,7 +61,7 @@ const FAQAccordion = ({ faq, index }: { faq: FAQItem; index: number }) => {
           className="w-full text-left p-4 flex justify-between items-center"
           onClick={() => setIsOpen(!isOpen)}
         >
-          <span className="font-medium pr-8">{faq.question}</span>
+          <span className="font-medium pr-8 text-gray-900">{faq.question}</span>
           <motion.span
             animate={{ rotate: isOpen ? 180 : 0 }}
             transition={{ duration: 0.3 }}
@@ -97,7 +97,7 @@ export default function FAQ() {
 
   return (
     <section className="section-padding max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+      <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 text-center mb-12">
         Frequently Asked Questions
       </h2>
       <div className="grid md:grid-cols-2 gap-8">

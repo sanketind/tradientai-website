@@ -23,7 +23,7 @@ export default function Hero() {
   return (
     <section className="hero-gradient section-padding max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 rounded-3xl">
       <div className="text-center max-w-4xl mx-auto">
-        <h1 className="text-4xl md:text-6xl font-bold mb-6">
+        <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
           <div className="mb-2">AI Customer Service</div>
           <div>
             Agents for
@@ -59,7 +59,7 @@ export default function Hero() {
             'Scheduling Appointments',
             'Handling Multi-Language Inquiries'
           ].map((feature) => (
-            <span key={feature} className="bg-gray-100 px-4 py-2 rounded-full text-sm">
+            <span key={feature} className="bg-gray-100 px-4 py-2 rounded-full text-sm text-gray-900">
               {feature}
             </span>
           ))}

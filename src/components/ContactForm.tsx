@@ -72,9 +72,12 @@ export default function ContactForm() {
   return (
     <section id="contact-form" className="section-padding max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="max-w-xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
+        <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 text-center mb-4">
           Join the Waitlist
         </h2>
+        <p className="text-lg text-gray-600 max-w-2xl mx-auto text-center mb-8">
+          Secure early access to our AI voice agents and stay ahead of the competition
+        </p>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <input
@@ -112,26 +115,28 @@ export default function ContactForm() {
               className="w-full px-4 py-3 rounded-full bg-white border border-gray-200 focus:border-black focus:ring-1 focus:ring-black transition-colors disabled:opacity-50"
             />
           </div>
-          {submitStatus === 'success' && (
-            <div className="text-green-600 text-center py-2">
-              Thank you for joining our waitlist! We'll be in touch soon.
-            </div>
-          )}
-          {submitStatus === 'error' && (
-            <div className="text-red-600 text-center py-2">
-              {errorMessage}
-            </div>
-          )}
-          <motion.button
-            type="submit"
-            className="w-full btn-primary mt-6"
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-            disabled={isSubmitting}
-          >
-            {isSubmitting ? 'Submitting...' : 'Submit'}
-          </motion.button>
+          <div className="pt-4">
+            <button
+              type="submit"
+              disabled={isSubmitting}
+              className="w-full btn-primary disabled:opacity-50"
+            >
+              {isSubmitting ? 'Submitting...' : 'Join Waitlist'}
+            </button>
+          </div>
         </form>
+
+        {submitStatus === 'success' && (
+          <div className="mt-6 p-4 bg-green-50 rounded-lg text-green-800 text-center">
+            Thank you for joining our waitlist! We'll be in touch soon.
+          </div>
+        )}
+
+        {submitStatus === 'error' && (
+          <div className="mt-6 p-4 bg-red-50 rounded-lg text-red-800 text-center">
+            {errorMessage}
+          </div>
+        )}
       </div>
     </section>
   );

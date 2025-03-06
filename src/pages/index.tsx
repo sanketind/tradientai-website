@@ -10,7 +10,15 @@ const Hero = dynamic(() => import('../components/Hero'), {
   ssr: true,
 });
 
+const SuccessMetrics = dynamic(() => import('../components/SuccessMetrics'), {
+  ssr: true,
+});
+
 const Features = dynamic(() => import('../components/Features'), {
+  ssr: true,
+});
+
+const PricingTable = dynamic(() => import('../components/PricingTable'), {
   ssr: true,
 });
 
@@ -31,7 +39,9 @@ const Home: NextPage = () => {
     <main className="min-h-screen">
       <Navbar />
       <Hero />
+      <SuccessMetrics />
       <Features />
+      <PricingTable />
       <ContactForm />
       <Footer />
       <WhatsAppButton />
@@ -47,4 +57,4 @@ export const getStaticProps = async () => {
   };
 };
 
-export default Home; 
+export default Home;
