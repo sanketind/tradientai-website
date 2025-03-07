@@ -42,8 +42,8 @@ const Features = () => {
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
-            <div key={index} className="feature-card">
-              <div className="relative w-full h-64">
+            <div key={index} className="feature-card flex flex-col items-center">
+              <div className="relative w-full h-64 mb-4">
                 <Image
                   src={feature.image}
                   alt={feature.title}
@@ -53,8 +53,10 @@ const Features = () => {
                   priority={index < 3}
                 />
               </div>
-              <h3 className="text-xl font-semibold mt-4 mb-2 text-gray-900">{feature.title}</h3>
-              <p className="text-gray-600">{feature.description}</p>
+              <div className="w-full text-center">
+                <h3 className="text-xl font-semibold mb-2 text-gray-900">{feature.title}</h3>
+                <p className="text-gray-600">{feature.description}</p>
+              </div>
             </div>
           ))}
         </div>

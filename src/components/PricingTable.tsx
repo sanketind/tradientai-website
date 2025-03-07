@@ -17,7 +17,7 @@ const PricingTable = () => {
         {/* Pricing Cards */}
         <div className="space-y-6">
           {/* First Tier */}
-          <div className="bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-200 border border-gray-100 overflow-hidden">
+          <div className="bg-white rounded-2xl shadow-sm transition-shadow duration-200 border border-gray-100 overflow-hidden">
             <div className="grid grid-cols-2 items-center">
               <div className="p-6">
                 <h3 className="text-lg font-semibold text-gray-900 mb-1">First 100 minutes</h3>
@@ -30,7 +30,7 @@ const PricingTable = () => {
           </div>
 
           {/* Second Tier */}
-          <div className="bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-200 border border-gray-100 overflow-hidden">
+          <div className="bg-white rounded-2xl shadow-sm transition-shadow duration-200 border border-gray-100 overflow-hidden">
             <div className="grid grid-cols-2 items-center">
               <div className="p-6">
                 <h3 className="text-lg font-semibold text-gray-900 mb-1">Next 900 minutes</h3>
@@ -43,7 +43,7 @@ const PricingTable = () => {
           </div>
 
           {/* Third Tier */}
-          <div className="bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-200 border border-gray-100 overflow-hidden">
+          <div className="bg-white rounded-2xl shadow-sm transition-shadow duration-200 border border-gray-100 overflow-hidden">
             <div className="grid grid-cols-2 items-center">
               <div className="p-6">
                 <h3 className="text-lg font-semibold text-gray-900 mb-1">Beyond 1,000 minutes</h3>
