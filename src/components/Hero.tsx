@@ -34,7 +34,7 @@ export default function Hero() {
                 animate={{ y: 0, opacity: 1 }}
                 exit={{ y: -20, opacity: 0 }}
                 transition={{ duration: 0.3 }}
-                className="inline-block ml-3 text-[#F29DBF]"
+                className="inline-block ml-3 text-[#EC4899]"
               >
                 {rotatingWords[currentWordIndex]}
               </motion.span>
@@ -44,14 +44,26 @@ export default function Hero() {
         <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
           Streamline Operations and Cut Costs with AI Voice Agents
         </p>
-        <motion.button 
-          onClick={scrollToContact}
-          className="btn-primary"
-          whileHover={{ x: 10 }}
-          transition={{ type: "spring", stiffness: 400, damping: 10 }}
-        >
-          Join waitlist
-        </motion.button>
+        <div className="flex justify-center gap-4 mb-8">
+          <motion.button 
+            onClick={scrollToContact}
+            className="btn-primary"
+            whileHover={{ x: 10 }}
+            transition={{ type: "spring", stiffness: 400, damping: 10 }}
+          >
+            Join waitlist
+          </motion.button>
+          <motion.a 
+            href="https://cal.com/sanket-ind/30min"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-outline"
+            whileHover={{ x: 10 }}
+            transition={{ type: "spring", stiffness: 400, damping: 10 }}
+          >
+            Book a demo
+          </motion.a>
+        </div>
         <div className="mt-8 flex flex-wrap justify-center gap-3">
           {[
             'Answering calls 24/7',

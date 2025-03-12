@@ -22,14 +22,26 @@ export default function Navbar() {
               priority
             />
           </Link>
-          <motion.button 
-            onClick={scrollToContact}
-            className="btn-primary text-sm"
-            whileHover={{ x: 10 }}
-            transition={{ type: "spring", stiffness: 400, damping: 10 }}
-          >
-            Join waitlist
-          </motion.button>
+          <div className="flex gap-3">
+            <motion.button 
+              onClick={scrollToContact}
+              className="btn-primary text-sm"
+              whileHover={{ x: 10 }}
+              transition={{ type: "spring", stiffness: 400, damping: 10 }}
+            >
+              Join waitlist
+            </motion.button>
+            <motion.a 
+              href="https://cal.com/sanket-ind/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-outline text-sm"
+              whileHover={{ x: 10 }}
+              transition={{ type: "spring", stiffness: 400, damping: 10 }}
+            >
+              Book a demo
+            </motion.a>
+          </div>
         </div>
       </div>
     </nav>

@@ -22,11 +22,11 @@ body {
 
 @layer components {
   .btn-primary {
-    @apply bg-black text-white px-6 py-3 rounded-full hover:opacity-90 transition-opacity;
+    @apply bg-[#db2777] text-white px-6 py-3 rounded-full hover:opacity-90 transition-opacity font-medium shadow-md;
   }
   
   .btn-outline {
-    @apply border border-black px-6 py-3 rounded-full hover:bg-black hover:text-white transition-colors;
+    @apply border-2 border-[#500724] px-6 py-3 rounded-full bg-[#fbcfe8] hover:bg-gray-100 text-[#500724] transition-colors font-medium;
   }
 
   .section-padding {
