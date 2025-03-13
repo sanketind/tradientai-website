@@ -45,19 +45,11 @@ export default function Hero() {
           Streamline Operations and Cut Costs with AI Voice Agents
         </p>
         <div className="flex justify-center gap-4 mb-8">
-          <motion.button 
-            onClick={scrollToContact}
-            className="btn-primary"
-            whileHover={{ x: 10 }}
-            transition={{ type: "spring", stiffness: 400, damping: 10 }}
-          >
-            Join waitlist
-          </motion.button>
           <motion.a 
             href="https://cal.com/sanket-ind/30min"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-outline"
+            className="btn-primary"
             whileHover={{ x: 10 }}
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
           >
